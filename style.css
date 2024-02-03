@@ -1,0 +1,109 @@
+body {
+    /* background: linear-gradient(#030637, #3C0753); */
+    background: url(backgrd.gif);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.one {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    color: greenyellow;
+    font-family: 'Rubik Burned', system-ui;
+}
+
+.two {
+    text-align: center;
+}
+
+#playBtn {
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 25%;
+}
+
+.three {
+    flex: 9.6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Adjust columns as needed */
+    grid-template-rows: repeat(2, 1fr); /* Adjust rows as needed */
+    /* gap: 10px; Adjust the gap as needed */
+    width: 600px;
+    height: 600px;
+
+    place-items: center;
+}
+
+.red {
+    background: linear-gradient(rgb(202, 81, 81) ,rgb(74, 13, 13));
+}
+
+.green {
+    background: linear-gradient(rgb(23, 177, 23) ,rgb(13, 87, 13));
+}
+
+.blue {
+    background: linear-gradient(rgb(3, 23, 241) ,rgb(115, 116, 221));
+}
+
+.yellow {
+    background: linear-gradient(rgb(255, 247, 0) ,rgb(212, 255, 0));
+}
+
+.box {
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    width: 200px;
+    height: 200px;
+    opacity: 90%;
+}
+
+.flicker {
+    transition: ease-in 0.3;
+    transform: scale(1.2);
+}
+
+.danger{
+    background-color: red;
+    transition: ease-in 0.3;
+    transform: scale(1.2);
+}
+
+.invisible {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width: 480px) {
+    .three {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 300px;
+
+    }
+    #playBtn{
+        width: 130px;
+        height: 70px;
+
+    }
+    .box {
+        display: grid;
+        place-items: center;
+        width: 100px;
+        height: 100px;
+    }
+
+}
